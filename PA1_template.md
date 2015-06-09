@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Activity Monitoring Data"
 author: "superapple"
-date: "Sunday, May 17, 2015"
+date: "Sunday, June 8, 2015"
 output: html_document
 ---
 #Introduction

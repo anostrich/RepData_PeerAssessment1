@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Activity Monitoring Data"
 author: "superapple"
-date: "Sunday, May 17, 2015"
+date: "Sunday, June 8, 2015"
 output: html_document
 ---
 #Introduction
@@ -40,7 +40,7 @@ plot(steps_inter, type = "l", xlab = "5 minute interval", ylab = "Average number
      = "Average number of steps in each 5 minute interval across all days")
 ```
 
-* Find the interval, which on average across all the days in the dataset contains the maximum number of steps. It is the 835 interval, and the mean is `r  max(steps_inter)`.
+* **Find the interval, which on average across all the days in the dataset contains the maximum number of steps. It is the 835 interval, and the mean is `r  max(steps_inter)`.**
 ```{r}
 names(steps_inter[steps_inter == max(steps_inter)])
 ```
@@ -52,8 +52,7 @@ names(steps_inter[steps_inter == max(steps_inter)])
 num_na <- sum(is.na(act_data$steps))
 ```
 * There are `r num_na` missing values.
-* Choose the he mean for each 5-minute interval to fill in the missing values. Use 
-for loops to flling in all of the missing values in the dataset. 
+* **Strategy: Choose the mean of each 5-minute interval to fill in the missing values. Use for loops to flling in all of the missing values in the dataset.** 
 ```{r}
 for (i in 1:nrow(act_data)){
   if (is.na(act_data[i,1])){
